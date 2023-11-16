@@ -67,6 +67,7 @@ const AddReviewForm = (props) => {
           //Reset the form values then navigate away.
           event.target.orderNum.value = "";
           event.target.comments.value = "";
+          window.scrollTo(0, 0);
           navigate("/reviews");
         }
       });

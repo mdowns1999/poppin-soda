@@ -37,6 +37,8 @@ const SodaDetail = () => {
       }
     }
 
+      window.scrollTo(0, 0);
+
     //Navigate away to Products page
     navigate("/products");
   };
