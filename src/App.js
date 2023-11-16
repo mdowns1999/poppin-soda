@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+], { basename: "/poppin-soda" });
 
 function App() {
   return <RouterProvider router={router} />;
