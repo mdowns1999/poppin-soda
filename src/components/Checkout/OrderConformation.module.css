@@ -1,0 +1,25 @@
+.orderNum {
+  text-align: center;
+  padding: 10px;
+}
+
+.orderNum span {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.review h2 {
+  text-align: center;
+  margin: 1em;
+}
+
+.review {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 10px;
+}
+
+.review button {
+  max-width: 50%;
+  margin: 2em auto;
+}

@@ -1,0 +1,34 @@
+.caption,
+.welcomeCaption {
+  position: absolute;
+  right: 80px;
+  top: 225px;
+  font-size: 20px;
+  padding: 10px;
+  line-height: normal;
+  border-radius: 10px;
+  background-color: grey;
+  opacity: 0.95;
+  transition: 0.25s;
+  margin: 8px;
+}
+
+.caption h1,
+.caption p,
+.welcomeCaption h1,
+.welcomeCaption p {
+  color: white;
+  padding: 15px;
+}
+
+.caption:hover {
+  opacity: 1;
+  background-color: var(--accentTwo, #ff9b42);
+  border-radius: 10px;
+}
+
+.slidesHolder {
+  display : flex;
+  transition-timing-function : ease-in;
+  flex-wrap: nowrap;
+  }

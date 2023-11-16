@@ -1,0 +1,41 @@
+.navigation {
+  background-color: var(--primaryColor, #0fa3b1);
+  font-weight: bold;
+  font-size: 22px;
+  border-top: 1px solid black;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 10px;
+}
+
+.list li {
+  list-style: none;
+}
+
+.list a {
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.25s;
+  color: white;
+}
+
+.list a:hover,
+.list .active {
+  color: #ff8e2b;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    padding: 1em;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+}

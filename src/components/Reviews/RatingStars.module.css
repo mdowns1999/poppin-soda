@@ -1,0 +1,15 @@
+.ratingBox {
+  padding: 10px;
+  margin: 16px auto;
+  max-width: 900px;
+}
+
+.rating {
+  text-align: center;
+  font-size: 18px;
+}
+.stars {
+  padding: 10px;
+  text-align: center;
+  margin: 1em auto;
+}

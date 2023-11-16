@@ -1,0 +1,37 @@
+.reviewForm {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.reviewForm .reviewWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  max-width: 100%;
+}
+
+.reviewForm .inputBox input,
+.reviewForm .inputBox input,
+.reviewForm textarea {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline;
+  padding: 8px;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 2em;
+  margin-top: 5px;
+}
+.reviewForm textarea {
+  height: 200px;
+}
+.reviewForm button {
+  max-width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .reviewForm .reviewWrapper {
+    max-width: 70%;
+  }
+}

@@ -1,0 +1,11 @@
+.quantityBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.quantityBox input {
+  padding: 0.5em;
+  font-size: 16px;
+}

@@ -1,0 +1,59 @@
+.orderDetailSection {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.orderDetailSection .orderH2 {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.orderDetailSection button {
+  max-width: 40%;
+  margin: 10px auto;
+}
+
+.orderInputBox {
+  padding: 10px;
+  align-content: center;
+  justify-items: center;
+}
+
+.orderInputBox div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orderInputBox span{
+  color: red;
+}
+
+.orderInputBox .inputBox label,
+.orderInputBox .inputBox input,
+.orderInputBox .inputBox textarea {
+  display: inline;
+  padding: 8px;
+  width: 80%;
+  font-size: 18px;
+}
+
+.orderInputBox .inputBox textarea {
+  height: 200px;
+}
+
+.orderInputBox .inputBox input,
+.orderInputBox .inputBox textarea {
+  border-radius: 5px;
+  border: solid black 2px;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .orderInputBox label,
+  .orderInputBox input,
+  .orderInputBox textarea {
+    width: 55%;
+  }
+}

@@ -1,0 +1,58 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  /* gap: 1em; */
+  list-style: none;
+  background-color: transparent;
+  /* padding: 1em; */
+  margin: 15px 0;
+  border-bottom: 1px solid black;
+}
+
+.itemImg {
+  max-width: 75px;
+  justify-self: center;
+}
+
+.summary {
+  margin: auto 0;
+}
+
+.summary span {
+  padding: 10px;
+}
+
+.amount {
+  padding: 10px;
+}
+
+.deleteBtn {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.actions button {
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  font-size: 18px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: var(--accentOne, #f9dc66);
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .details {
+    grid-template-columns: 1fr 1fr;
+  }
+}

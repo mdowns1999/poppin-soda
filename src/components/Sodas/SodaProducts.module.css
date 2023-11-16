@@ -1,0 +1,111 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 150px auto;
+  max-width: 1200px;
+  font-size: 18px;
+}
+
+.products li {
+  display: block;
+  width: 300px;
+  height: 350px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  z-index: 1;
+  margin: 10px;
+}
+
+.products li:hover {
+  z-index: 2;
+}
+
+.products li a {
+  display: block;
+  background-color: #f4f4f4;
+  width: 275px;
+  height: 310px;
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+  transition: height 0.5s ease-in, width 0.5s ease-in;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.products li a:hover {
+  width: 300px;
+  height: 450px;
+}
+
+.products li:hover a {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  background-color: #ff9b42;
+  transition: 0.5s;
+}
+
+.products li a img {
+  display: block;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+}
+
+.products li a h2 {
+  text-align: center;
+}
+
+.products li a div {
+  padding: 10px;
+}
+
+.productOfMonth {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em;
+  margin: 1em auto;
+  max-width: 1400px;
+  padding: 1em;
+  text-align: center;
+}
+
+.productOfMonth button {
+  max-width: 50%;
+}
+
+.productOfMonth h2,
+.productOfMonth p {
+  text-align: left;
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 700px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .productOfMonth {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

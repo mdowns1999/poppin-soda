@@ -1,0 +1,18 @@
+.allButFooter {
+  min-height: calc(80vh + 13px);
+}
+
+.ErrorBox {
+  max-width: 800px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.ErrorBox img {
+  width: 40%;
+}
+
+.ErrorBox {
+  padding: 1em;
+}
