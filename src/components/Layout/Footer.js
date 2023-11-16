@@ -16,14 +16,14 @@ const Footer = () => {
         <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
           <img
             className={classes.instagram}
-            src={require("../../images/socialIcons/Instagram_Glyph_Black.png")}
+            src={require("../../images/socialIcons/Instagram_Glyph_White.png")}
             alt="Instagram Logo"
           ></img>
         </a>
         <a href="https://www.facebook.com/" rel="noreferrer" target="_blank">
           <img
             className={classes.facebook}
-            src={require("../../images/socialIcons/f_logo_RGB-Black_58.png")}
+            src={require("../../images/socialIcons/f_logo_RGB-White_58.png")}
             alt="Facebook Logo"
           ></img>
         </a>

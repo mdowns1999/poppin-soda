@@ -2,7 +2,7 @@
   background-color: var(--primaryColor, #0fa3b1);
   font-weight: bold;
   font-size: 22px;
-  border-top: 1px solid black;
+  border-top: 1px solid white;
 }
 
 .list {
