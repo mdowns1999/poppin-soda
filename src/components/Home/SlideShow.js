@@ -57,7 +57,7 @@ const SlideShow = () => {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     if (isMobile) {
-      setHeight(450);
+      setHeight(550);
     } else {
       setHeight(650);
     }
