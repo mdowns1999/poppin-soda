@@ -11,6 +11,7 @@
   opacity: 0.95;
   transition: 0.25s;
   margin: 8px;
+  font-size: 18px;
 }
 
 .caption h1,
@@ -32,3 +33,12 @@
   transition-timing-function : ease-in;
   flex-wrap: nowrap;
   }
+
+  @media screen and (min-width: 850px) {
+    .caption,
+    .welcomeCaption {
+      font-size: 20px;
+    }
+    
+  }
+  
