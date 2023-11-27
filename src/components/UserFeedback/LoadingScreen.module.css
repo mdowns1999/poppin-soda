@@ -1,9 +1,9 @@
 .loadingSection {
   position: fixed;
   top: 15vh;
-  left: 35%;
+  left: 30%;
   padding: 10px;
-  width: 30%;
+  width: 40%;
   background-color: var(--secondaryColor, #d9e5d6);
   border-radius: 10px;
   border: 1px solid black;
