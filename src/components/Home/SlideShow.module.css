@@ -42,3 +42,57 @@
     
   }
   
+  /* .content {
+    position: absolute;
+    right: 80px;
+    top: 240px;
+    font-size: 20px;
+    padding: 10px;
+    line-height: normal;
+    border-radius: 10px;
+    background-color: grey;
+    opacity: 0.95;
+    transition: 0.25s;
+    margin: 8px;
+    font-size: 18px;
+  }
+  
+  .caption {
+    margin: 100px auto;
+    max-width: 1200px;
+  }
+  
+  .caption img{
+    border-radius: 0;
+  }
+  
+  .caption h1, .caption p{
+    color:white;
+  }
+  
+  .link:hover{
+    opacity: 1;
+    background-color: var(--accentTwo, #ff9b42);
+    border-radius: 10px;
+  }
+  
+     @media screen and (min-width: 768px) {
+      .content {
+        right: 50px;
+        top: 400px;
+        padding: 20px;
+        
+      }
+       
+      .caption {
+  
+        margin: 0 auto;
+      }
+      
+    }
+  
+    @media screen and (min-width: 1000px) {
+      .content {
+        top: 350px;
+      }
+    } */

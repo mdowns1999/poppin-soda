@@ -24,15 +24,15 @@ const Home = () => {
               </p>
             </div>
             <img
-              src={require("../../images/blank.png")}
-              alt="Poppin Soda Shop Logo"
+              src={require("../../images/pouringDrink.jpg")}
+              alt="Guy Pouring Drink"
             ></img>
           </section>
         </div>
 
         <section className={classes.homeSectionTwo}>
           <img
-            src={require("../../images/blank.png")}
+            src={require("../../images/ownerPhoto.jpg")}
             alt="Poppin Soda Shop Logo"
           ></img>
           <div>

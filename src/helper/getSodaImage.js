@@ -11,7 +11,7 @@ const getSodaImage = (imageName) => {
     case "Carmel Root Beer":
       return require("../images/root.jpg");
     default:
-      return require("../images/blank.png");
+      return require("../images/emptyCup.jpg");
   }
 };
 

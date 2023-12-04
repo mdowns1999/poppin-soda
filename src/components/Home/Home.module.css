@@ -1,5 +1,5 @@
 .home img {
-  max-width: 300px;
+  width: 80%;
   align-self: center;
 }
 
@@ -18,11 +18,25 @@
   padding: 5px;
 }
 
+@media screen and (min-width: 700px) {
+  .home img {
+    width: 50%;
+    align-self: center;
+  }
+  
+}
+
 @media screen and (min-width: 850px) {
   .homeSectionOne,
   .homeSectionTwo {
     flex-direction: row;
     gap: 4em;
   }
+
+  .home img {
+    width: 30%;
+    align-self: center;
+  }
+  
 }
 
