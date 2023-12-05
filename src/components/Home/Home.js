@@ -24,7 +24,7 @@ const Home = () => {
               </p>
             </div>
             <img
-              src={require("../../images/pouringDrink.jpg")}
+              src={require("../../images/manPouringDrink.jpg")}
               alt="Guy Pouring Drink"
             ></img>
           </section>

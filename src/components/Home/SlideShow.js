@@ -15,7 +15,7 @@ const captions = [
     title: "Feeling Creative?",
     description: "Customize your own soda today!",
     link: "/products/custom",
-    image: require("../../images/customSodas.jpg"),
+    image: require("../../images/customSodaBottles.jpg"),
   },
 ];
 
