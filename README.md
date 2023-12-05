@@ -1,14 +1,19 @@
-# Overview
+# Poppin Soda Frontend Overview
+Welcome to the Poppin Soda website! I made this website for my senior project.  I started learning React on my own and decided to apply what I learned to this website.  My goal for this project was to create a mock website for a business.  I figured that a project like this would help me apply what I learned with stores, hooks, Http Requests, etc.  Along with using React, I also used a few libries that were helpful in building th eproject.  I also created my own backend service for the site.  You can view the source code and API docs for it in a link down below.
 
-Welcome to my React Senior Project App!
+* [Poppin Soda Website](https://mdowns1999.github.io/poppin-soda/)
+* [Poppin Soda Backend Code](https://github.com/mdowns1999/backendSodaApp)
 
+# Development Environment 
 
-* [App Demo Video](http://youtu.be/rSvn1qME2ho?hd=1)
-* [See Live Deployed Site](https://mdowns1999.github.io/todo-list/)
+The environment I used for this project was Visual Studio Code by Microsoft.  The Web Page was deployed on GitHub.  This project used Node JS, Express JS, and JavaScript.  I also  used Swagger to create my API documentation.  I deployed my backend on Render and my database on MongoDB. These services worked well for this project.  Feel free to check out their websites to learn more.
 
-# Development Environment
+# Useful Websites
+The websites down below are sources I used for this project.  These librires, the Udemy Course, and stack overflow pages with their many contributers helped me with this project.  I give them credit for helping me complete this project.  I highly recommend these sources.  I also highly recommed the Udemy Course by Max if you want to learn React!
 
-The IDE I used was Visual Studio Code by Microsoft.  I have used this IDE before and found it easy to use.  I also installed the necessary packages like Node, Express, Bootstrap and Angular.
-
-# Future Work
+* [Complete React Course by Maximiliam Schwarzmuller](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+* [Material UI](https://mui.com/material-ui/react-rating/)
+* [React Smart Slider](https://github.com/therkverma/react-smart-slider/blob/master/README.md)
+* [StackOverflow on Radio buttons looking like normal Buttons](https://stackoverflow.com/questions/16242980/making-radio-buttons-look-like-buttons-instead)
+* [StackOverflow on Check Boxes looking like normal Buttons](https://stackoverflow.com/questions/19927813/make-a-checkbox-look-like-a-button-css)
 
