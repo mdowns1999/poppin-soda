@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poppin Soda Error Page</title>
-</head>
-<body>
-    <main class="join_main">
-        <div class="thanks_box">
-            <h1>Page Does not Exsit!</h1>
-        <p class="thanks_p">Looks like you entered a wrong page!  Head back to home to try again!</p>
-        <a class="button" href='index.html'>Head back to Home</a>
-        </div>
+  </head>
+  <style>
+    body {
+      background-color: rgb(164, 164, 164);
+      font-family: sans-serif;
+    }
+    main {
+      max-width: 1200px;
+      margin: 10px auto;
+      text-align: center;
+    }
 
+    .button {
+      border: 1px solid black;
+      background-color: #0fa3b1;
+      border-radius: 10px;
+      padding: 1em;
+      margin: 15px auto;
+      width: 100%;
+      max-width: 100%;
+      font-size: 18px;
+      transition: 0.25s;
+      display: block;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #f9dc66;
+      cursor: pointer;
+    }
+
+    .button:active {
+      background-color: #ff9b42;
+    }
+  </style>
+  <body>
+    <main>
+      <div class="error_box">
+        <h1>Page Does not Exsit!</h1>
+        <p class="error">
+          Something Went Wrong! Head back to the main page to try again!
+        </p>
+        <a class="button" href="https://mdowns1999.github.io/poppin-soda"
+          >Head back to Main Site</a
+        >
+      </div>
     </main>
-</body>
+  </body>
 </html>
