@@ -2,32 +2,32 @@ import priceBySize from "../helper/priceBySize";
 import CartContext from "./cart-context";
 import React, { useReducer } from "react";
 
-// function updateBrowserStorage(cart){
-//     localStorage.setItem("cart", JSON.stringify(cart));
-// }
+function updateBrowserStorage(cart){
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 let defaultCartState = {
   items: [],
   totalAmount: 0,
 };
 
-// if(localStorage.getItem("cart") === null){
-//   defaultCartState = {
-//     items: [],
-//     totalAmount: 0,
-//   };
-// }else{
-//   let cart = JSON.parse(localStorage.getItem("cart"));
+if(localStorage.getItem("cart") === null){
+  defaultCartState = {
+    items: [],
+    totalAmount: 0,
+  };
+}else{
+  let cart = JSON.parse(localStorage.getItem("cart"));
 
-//   if(cart.items.length === 0){
-//     defaultCartState = {
-//       items: [],
-//       totalAmount: 0,
-//     };
-//   }else{
-//     defaultCartState = cart;
-//   }
-// }
+  if(cart.items.length === 0){
+    defaultCartState = {
+      items: [],
+      totalAmount: 0,
+    };
+  }else{
+    defaultCartState = cart;
+  }
+}
 
 //State is last snapshot, return new state
 const cartReducer = (state, action) => {
@@ -62,7 +62,7 @@ const cartReducer = (state, action) => {
     };
 
     //Update cart in case user leaves
-    //updateBrowserStorage(cart);
+    updateBrowserStorage(cart);
 
     return cart;
   }
@@ -92,7 +92,7 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
     //Update cart in case user leaves
-    //updateBrowserStorage(cart);
+    updateBrowserStorage(cart);
 
     return cart;
   }
@@ -123,7 +123,7 @@ const cartReducer = (state, action) => {
     }
 
     //Update cart in case user leaves
-    //updateBrowserStorage(cart);
+    updateBrowserStorage(cart);
 
     return cart;
   }
@@ -136,7 +136,7 @@ const cartReducer = (state, action) => {
     };
 
     //Update cart in case user leaves
-    //updateBrowserStorage(cart);
+    updateBrowserStorage(cart);
 
     return cart;
   }
