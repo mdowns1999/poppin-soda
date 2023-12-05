@@ -16,7 +16,7 @@ const Footer = () => {
         <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
           <img
             className={classes.instagram}
-            src={require("../../images/socialIcons/Instagram_Glyph_White.png")}
+            src={require("../../images/socialIcons/instaGramLogoWhite.png")}
             alt="Instagram Logo"
           ></img>
         </a>
