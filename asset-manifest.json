@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/poppin-soda/static/css/main.1b04f2ce.css",
-    "main.js": "/poppin-soda/static/js/main.700dc864.js",
+    "main.js": "/poppin-soda/static/js/main.e807c824.js",
     "static/js/787.e1a60e03.chunk.js": "/poppin-soda/static/js/787.e1a60e03.chunk.js",
     "static/media/ownersPhoto.jpg": "/poppin-soda/static/media/ownersPhoto.950e2a9e3cfdfaf2c5c4.jpg",
     "static/media/manPouringSodaDrink.jpg": "/poppin-soda/static/media/manPouringSodaDrink.4dda5513e6ee8de2392f.jpg",
@@ -16,11 +16,11 @@
     "static/media/sodaLogo.png": "/poppin-soda/static/media/sodaLogo.56ea285e416e7bcdf33f.png",
     "index.html": "/poppin-soda/index.html",
     "main.1b04f2ce.css.map": "/poppin-soda/static/css/main.1b04f2ce.css.map",
-    "main.700dc864.js.map": "/poppin-soda/static/js/main.700dc864.js.map",
+    "main.e807c824.js.map": "/poppin-soda/static/js/main.e807c824.js.map",
     "787.e1a60e03.chunk.js.map": "/poppin-soda/static/js/787.e1a60e03.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b04f2ce.css",
-    "static/js/main.700dc864.js"
+    "static/js/main.e807c824.js"
   ]
 }
