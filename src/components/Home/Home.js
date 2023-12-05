@@ -32,7 +32,7 @@ const Home = () => {
 
         <section className={classes.homeSectionTwo}>
           <img
-            src={require("../../images/ownerPhoto.jpg")}
+            src={require("../../images/ownersPhoto.jpg")}
             alt="Poppin Soda Shop Logo"
           ></img>
           <div>
