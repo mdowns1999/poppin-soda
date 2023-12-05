@@ -1,5 +1,5 @@
 # Poppin Soda Frontend Overview
-Welcome to the Poppin Soda website! I made this website for my senior project.  I started learning React on my own and decided to apply what I learned to this website.  My goal for this project was to create a mock website for a business.  I figured that a project like this would help me apply what I learned with stores, hooks, Http Requests, etc.  Along with using React, I also used a few libries that were helpful in building th eproject.  I also created my own backend service for the site.  You can view the source code and API docs for it in a link down below.
+Welcome to the Poppin Soda website! I made this website for my senior project.  I started learning React on my own and decided to apply what I learned to this website.  My goal for this project was to create a mock website for a business.  I figured that a project like this would help me apply what I learned with stores, hooks, Http Requests, etc.  Along with using React, I also used a few libries that were helpful in building the project.  I also created my own backend service for the site.  You can view the source code and API docs for it in a link down below.
 
 * [Poppin Soda Website](https://mdowns1999.github.io/poppin-soda/)
 * [Poppin Soda Backend Code](https://github.com/mdowns1999/backendSodaApp)
