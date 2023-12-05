@@ -24,7 +24,7 @@ const ErrorPage = () => {
         <main>
           <div className={classes.ErrorBox}>
             <img
-              src={require("../../images/blank.png")}
+              src={require("../../images/emptyCup.jpg")}
               alt="Custom Soda"
             ></img>
             <h1 className="pageBanner">{title}</h1>
