@@ -91,7 +91,7 @@ const SlideShow = () => {
       buttonShape="square" // round or square
       height={windowHeight}
       autoSlideInterval={7000}
-      autoSlide={false}
+      autoSlide={true}
     />
   );
 };
