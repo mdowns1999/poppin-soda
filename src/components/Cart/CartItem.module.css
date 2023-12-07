@@ -35,12 +35,13 @@
 
 .actions button {
   border-radius: 5px;
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   background-color: transparent;
   font-size: 18px;
   transition: 0.25s;
   cursor: pointer;
+  color:black;
 }
 
 .actions button:hover {

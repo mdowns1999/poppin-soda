@@ -25,6 +25,7 @@
   background-color: #f8f8f8;
   border-radius: 100%;
   transition: 0.25s;
+  color:black;
 }
 
 .cartBtn:hover .badge,
