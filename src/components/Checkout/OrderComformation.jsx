@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import CartContext from "../../store/cart-context";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import fetchHttp from "../../helper/fetchHttp";
@@ -52,7 +52,7 @@ const OrderConformation = () => {
 
 export default OrderConformation;
 
-// eslint-disable-next-line react-refresh/only-export-components
+
 export async function loader({ params }) {
   const id = params.id;
   let error = {

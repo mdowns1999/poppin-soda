@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types"; // Import PropTypes
 import classes from "./Modal.module.css";

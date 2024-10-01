@@ -1,3 +1,4 @@
+import React from 'react';
 import Star from "../UI/Star";
 import classes from "./ReviewItem.module.css";
 import PropTypes from 'prop-types'; // Import PropTypes

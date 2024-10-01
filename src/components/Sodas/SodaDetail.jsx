@@ -1,4 +1,4 @@
-import { useRef, useState, useContext } from "react";
+import React, { useRef, useState, useContext } from "react";
 import classes from "./SodaDetail.module.css";
 import CartContext from "../../store/cart-context";
 import Button from "../UI/Button";
@@ -92,7 +92,6 @@ const SodaDetail = () => {
 
 export default SodaDetail;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export async function loader({ params }) {
   const id = params.id;
   let error = {

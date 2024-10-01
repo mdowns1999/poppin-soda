@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
 import classes from "./OrderSummary.module.css";
 import { useLoaderData, useNavigate } from "react-router-dom";

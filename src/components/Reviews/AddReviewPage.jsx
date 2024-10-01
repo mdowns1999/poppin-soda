@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLoaderData } from "react-router";
 import fetchHttp from "../../helper/fetchHttp";
 import AddReviewForm from "./AddReviewForm";
@@ -26,7 +27,6 @@ const AddReviewPage = () => {
 
 export default AddReviewPage;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   let error = {
     message:

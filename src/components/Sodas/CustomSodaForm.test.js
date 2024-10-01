@@ -1,3 +1,4 @@
+import React from 'react';
 import { fireEvent, render, screen } from "@testing-library/react";
 import CustomSodaForm from "./CustomSodaForm";
 import { BrowserRouter } from "react-router-dom";
@@ -5,8 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 describe("CustomSodaForm Component", () => {
   test("See if Radio Buttons for Syrups and Sodas Render", () => {
     //Set up
-    let syrupList = [{ id: 1, name: "Syrup 1", price: 1.0 }];
-    let sodaList = [{ id: 10, name: "Soda 1", price: 10.0 }];
+    let syrupList = [{ id: '1', name: "Syrup 1", price: '1.0' }];
+    let sodaList = [{ id: '10', name: "Soda 1", price: '10.0' }];
     render(
       <BrowserRouter>
         <CustomSodaForm syrupList={syrupList} sodaList={sodaList} />
@@ -25,8 +26,8 @@ describe("CustomSodaForm Component", () => {
 
   test("See if The Custom Form Quanitiy works", () => {
     //Set up
-    let syrupList = [{ id: 1, name: "Syrup 1", price: 1.0 }];
-    let sodaList = [{ id: 10, name: "Soda 1", price: 10.0 }];
+    let syrupList = [{ id: '1', name: "Syrup 1", price: '1.0' }];
+    let sodaList = [{ id: '10', name: "Soda 1", price: '10.0' }];
     render(
       <BrowserRouter>
         <CustomSodaForm syrupList={syrupList} sodaList={sodaList} />

@@ -1,21 +1,23 @@
+import React from 'react';
 import { fireEvent, render, screen } from "@testing-library/react";
 import QuantitySelect from "./QuantitySelect";
 
-describe("SizeSelect Component", () => {
-  test("Render input box with no input", () => {
-    //Set up
+describe("QuantitySelect Component", () => {
+  test("Render input box and change quantity", () => {
+    // Set up
+    const mockQuantityRef = React.createRef(); // Create a mock ref
     render(
       <form>
-        <QuantitySelect />
+        <QuantitySelect quantityRef={mockQuantityRef} /> 
       </form>
     );
 
-    //Exercise
+    // Exercise
     const input = screen.getByLabelText("Quantity:");
 
     fireEvent.change(input, { target: { value: "1" } });
 
-    // //Assert
+    // Assert
     expect(input.value).toBe("1");
   });
 });

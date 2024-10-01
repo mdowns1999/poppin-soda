@@ -1,3 +1,4 @@
+import React from 'react';
 import SodaItem from "./SodaItem";
 import classes from "./SodaProducts.module.css";
 import Button from "../UI/Button";
@@ -57,7 +58,6 @@ const SodaProducts = () => {
 
 export default SodaProducts;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   let error = {
     message:

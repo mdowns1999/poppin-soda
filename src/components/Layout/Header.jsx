@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 import Navigation from "./Navigation";

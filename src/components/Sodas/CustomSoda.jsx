@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLoaderData } from "react-router-dom";
 import classes from "./CustomSoda.module.css";
 import CustomSodaForm from "./CustomSodaForm";
@@ -34,7 +35,6 @@ const CustomSodas = () => {
 
 export default CustomSodas;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   let error = {
     message:
