@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types"; // Import PropTypes
 import classes from "./CheckBoxList.module.css";
 import CheckBox from "./CheckBox";
@@ -71,7 +71,7 @@ CheckBoxList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired, // Ensure id is a required string
       name: PropTypes.string.isRequired, // Ensure name is a required string
-      price: PropTypes.number.isRequired // Ensure price is a required number
+      price: PropTypes.string.isRequired // Ensure price is a required number
     })
   ).isRequired, // list is required and must be an array of objects
   setTotalValue: PropTypes.func.isRequired, // setTotalValue is a required function

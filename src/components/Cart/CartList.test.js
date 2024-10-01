@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import CartList from "./CartList";
 
@@ -7,14 +8,14 @@ describe("CartList Component Tests", () => {
     let DUMMYCONTEXT = {
         items: [
           {
-            id: 1,
+            id: '1',
             name: "Test Soda",
             price: 5.0,
             amount: 1,
             size: 8,
           },
           {
-            id: 2,
+            id: '2',
             name: "Soda 2",
             price: 6.0,
             amount: 1,

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Button from "../UI/Button";
 import classes from "./ReviewPage.module.css";
@@ -37,7 +38,6 @@ const ReviewPage = () => {
 
 export default ReviewPage;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   let error = {
     message:

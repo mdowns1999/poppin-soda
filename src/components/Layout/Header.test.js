@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
@@ -6,9 +7,10 @@ import Header from "./Header";
 describe("General Layout Components Tests", () => {
   test("Check if the header image has the right alt tag", () => {
     //Set up
-
+    // Create a mock function for the onClick prop
+    const mockOnClick = jest.fn();
     render(
-       <BrowserRouter><Header/></BrowserRouter>
+       <BrowserRouter><Header onShowCart={mockOnClick}/></BrowserRouter>
     );
 
     //Exercise
@@ -23,10 +25,11 @@ describe("General Layout Components Tests", () => {
 
   test("Header (with Navigation) renders correctly", () => {
     //Set up
-    
+    // Create a mock function for the onClick prop
+    const mockOnClick = jest.fn();
     //console.log(cartCtx.items)
     render(
-        <BrowserRouter><Header/></BrowserRouter>
+        <BrowserRouter><Header onShowCart={mockOnClick}/></BrowserRouter>
      );
 
     //Exercise
@@ -41,7 +44,8 @@ describe("General Layout Components Tests", () => {
   test("Header displays different when on a new page", () => {
     //Set up
     const OLD_LOCATION = window.location;
-
+    // Create a mock function for the onClick prop
+    const mockOnClick = jest.fn();
   Object.defineProperty(window, 'location', {
     value: new URL(OLD_LOCATION + "reviews/add"),
     writable: true,
@@ -49,7 +53,7 @@ describe("General Layout Components Tests", () => {
 
     //console.log(cartCtx.items)
     render(
-        <BrowserRouter><Header/></BrowserRouter>
+        <BrowserRouter><Header onShowCart={mockOnClick}/></BrowserRouter>
      );
 
     //Exercise

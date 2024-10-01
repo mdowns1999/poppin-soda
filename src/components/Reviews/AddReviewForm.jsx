@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "../UI/Button";
 import classes from "./AddReviewForm.module.css";
 import RatingStars from "./RatingStars";
@@ -46,7 +46,6 @@ const postReview = (orderNum, message, name, rating, date) => {
 const AddReviewForm = ({orders}) => {
   const navigate = useNavigate();
   const [rating, setRating] = useState(0);
-
   const submitReviewHandler = (event) => {
     event.preventDefault();
     if (hasOrder(orders, +event.target.orderNum.value)) {
@@ -105,7 +104,7 @@ const AddReviewForm = ({orders}) => {
         </div>
       </div>
 
-      <RatingStars setRating={setRating} />
+      <RatingStars rating={rating} setRating={setRating} />
 
       <Button>Submit</Button>
     </form>

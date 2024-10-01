@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Outlet, useNavigation } from "react-router-dom";
 import Header from "./Header";
 import CartProvider from "../../store/CartProvider";

@@ -1,9 +1,9 @@
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types"; // Import PropTypes
 
-const Star = ({ readOnly, value, setRating }) => {
+const Star = ({ readOnly, value = 1, setRating }) => {
   // An excellent library from mui.com for creating rating stars: https://mui.com/material-ui/react-rating/
   const [currentValue, setValue] = useState(value);
   const [stars, setStars] = useState(value);
@@ -35,7 +35,7 @@ const Star = ({ readOnly, value, setRating }) => {
 // Define the expected prop types
 Star.propTypes = {
   readOnly: PropTypes.bool, // readOnly is optional and must be a boolean
-  value: PropTypes.number.isRequired, // value is required and must be a number
+  value: PropTypes.number, // value is required and must be a number
   setRating: PropTypes.func, // setRating must be a function
 };
 

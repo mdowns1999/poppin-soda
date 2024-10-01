@@ -1,10 +1,11 @@
+import React from 'react';
 import { render, screen } from "@testing-library/react";
 import SodaItem from "./SodaItem";
 import { BrowserRouter } from "react-router-dom";
 
 //Global test variables we will use over and over.
 const testItem = {
-  id: 1,
+  id: "1",
   name: "Test Soda",
   price: 5.00,
   description: "A wonderful soda.",

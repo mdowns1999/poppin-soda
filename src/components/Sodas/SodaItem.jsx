@@ -1,3 +1,4 @@
+import React from 'react';
 import ProductItem from "../UI/ProductItem";
 import { Link } from "react-router-dom";
 import getSodaImage from "../../helper/getSodaImage";

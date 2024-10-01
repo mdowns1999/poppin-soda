@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import ReviewList from "./ReviewList";
@@ -6,13 +7,13 @@ describe("ReviewList Component Tests", () => {
   test("Check the Review List Renders to the screen", () => {
     //Set up
     let reviews = [{
-        id: 1,
+        _id: '1',
         name: "John Doe",
         rating: 5.00,
         message: "A wonderful soda.",
         date: "1/1/23"
       },{
-        id: 2,
+        _id: '2',
         name: "Jain Doe",
         rating: 5.00,
         message: "A terrible soda.",

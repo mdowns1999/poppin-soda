@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import classes from "./Home.module.css";
 import SlideShow from "./SlideShow";
 import pouringImg from "../../images/manPouringSodaDrink.jpg"

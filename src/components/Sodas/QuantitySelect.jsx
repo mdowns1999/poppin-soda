@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from "./Quantity.module.css";
 import PropTypes from 'prop-types'; // Import PropTypes
 

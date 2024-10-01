@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
@@ -55,7 +55,7 @@ const Cart = ({ onClose }) => {
 
 // Define PropTypes for Cart
 Cart.propTypes = {
-  onClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func,
 };
 
 export default Cart;

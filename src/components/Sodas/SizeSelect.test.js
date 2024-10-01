@@ -1,12 +1,14 @@
+import React from 'react';
 import { fireEvent, render, screen } from "@testing-library/react";
 import SizeSelect from "./SizeSelect";
 
 describe("SizeSelect Component", () => {
   test("Renders Three radio button boxes", () => {
     //Set up
+    const mockOnClick = jest.fn();
     render(
       <form>
-        <SizeSelect />
+        <SizeSelect setSize={mockOnClick}/>
       </form>
     );
 
@@ -21,9 +23,10 @@ describe("SizeSelect Component", () => {
 
   test("renders that the 8oz button is checked", () => {
     //Set up
+    const mockOnClick = jest.fn();
     render(
       <form>
-        <SizeSelect />
+        <SizeSelect setSize={mockOnClick}/>
       </form>
     );
     const smallBtn = screen.getByRole("radio", { name: "8 oz" });
@@ -41,9 +44,10 @@ describe("SizeSelect Component", () => {
 
   test("Renders that the 16 oz button is checked", () => {
     //Set up
+    const mockOnClick = jest.fn();
     render(
       <form>
-        <SizeSelect />
+        <SizeSelect setSize={mockOnClick}/>
       </form>
     );
     const smallBtn = screen.getByRole("radio", { name: "8 oz" });
@@ -61,9 +65,10 @@ describe("SizeSelect Component", () => {
 
   test("Renders that the 32 oz button is checked", () => {
     //Set up
+    const mockOnClick = jest.fn();
     render(
       <form>
-        <SizeSelect />
+        <SizeSelect setSize={mockOnClick}/>
       </form>
     );
     const smallBtn = screen.getByRole("radio", { name: "8 oz" });

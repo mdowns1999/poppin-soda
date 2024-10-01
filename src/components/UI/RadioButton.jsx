@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from "prop-types"; // Import PropTypes
 import classes from "./RadioButton.module.css";
 
