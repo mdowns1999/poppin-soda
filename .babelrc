@@ -1,6 +1,8 @@
 {
-    "presets": [
-      "@babel/preset-env", // Allows you to use the latest JavaScript
-      "@babel/preset-react" // Transforms JSX into JavaScript
-    ]
-  }
+  "presets": [
+    "@babel/preset-env",
+    ["@babel/preset-react", {
+      "runtime": "automatic" // This enables the new JSX transform
+    }]
+  ]
+}

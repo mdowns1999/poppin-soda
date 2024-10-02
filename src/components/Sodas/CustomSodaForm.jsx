@@ -41,9 +41,9 @@ const CustomSodaForm = ({ sodaList, syrupList }) => {
       name: "Custom " + flavorName.name,
       amount: +quantityRef.current.value,
       price: totalCost,
-      ingredents: {
+      ingredients: {
         baseSoda: flavorName.name,
-        ingredents: [SelectedSodaList],
+        ingredients: SelectedSodaList,
       },
       size: size,
     });
@@ -121,14 +121,14 @@ CustomSodaForm.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,   // Each soda must have an id of type string
       name: PropTypes.string.isRequired, // Each soda must have a name of type string
-      price: PropTypes.string.isRequired, // Each soda must have a price of type number
+      price: PropTypes.number.isRequired, // Each soda must have a price of type number
     })
   ).isRequired, // sodaList is required and must be an array of objects
   syrupList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,   // Each syrup must have an id of type string
       name: PropTypes.string.isRequired, // Each syrup must have a name of type string
-      price: PropTypes.string.isRequired, // Each syrup must have a price of type number
+      price: PropTypes.number.isRequired, // Each syrup must have a price of type number
     })
   ).isRequired, // syrupList is required and must be an array of objects
 };

@@ -71,7 +71,7 @@ CheckBoxList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired, // Ensure id is a required string
       name: PropTypes.string.isRequired, // Ensure name is a required string
-      price: PropTypes.string.isRequired // Ensure price is a required number
+      price: PropTypes.number.isRequired // Ensure price is a required number
     })
   ).isRequired, // list is required and must be an array of objects
   setTotalValue: PropTypes.func.isRequired, // setTotalValue is a required function
