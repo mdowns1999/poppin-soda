@@ -8,7 +8,7 @@ import SizeSelect from "./SizeSelect";
 import QuantitySelect from "./QuantitySelect";
 import { useNavigate } from "react-router-dom";
 import priceBySize from "../../helper/priceBySize";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const CustomSodaForm = ({ sodaList, syrupList }) => {
   // Variables
@@ -119,14 +119,14 @@ const CustomSodaForm = ({ sodaList, syrupList }) => {
 CustomSodaForm.propTypes = {
   sodaList: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,   // Each soda must have an id of type string
+      id: PropTypes.string.isRequired, // Each soda must have an id of type string
       name: PropTypes.string.isRequired, // Each soda must have a name of type string
       price: PropTypes.number.isRequired, // Each soda must have a price of type number
     })
   ).isRequired, // sodaList is required and must be an array of objects
   syrupList: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,   // Each syrup must have an id of type string
+      id: PropTypes.string.isRequired, // Each syrup must have an id of type string
       name: PropTypes.string.isRequired, // Each syrup must have a name of type string
       price: PropTypes.number.isRequired, // Each syrup must have a price of type number
     })

@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 import classes from "./AddReviewForm.module.css";
 import RatingStars from "./RatingStars";
 import fetchHttp from "../../helper/fetchHttp";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const hasOrder = (orders, orderNum) => {
   //Filter the array to just the order numberwe need.
@@ -43,7 +43,7 @@ const postReview = (orderNum, message, name, rating, date) => {
   });
 };
 
-const AddReviewForm = ({orders}) => {
+const AddReviewForm = ({ orders }) => {
   const navigate = useNavigate();
   const [rating, setRating] = useState(0);
   const submitReviewHandler = (event) => {
@@ -115,10 +115,10 @@ const AddReviewForm = ({orders}) => {
 AddReviewForm.propTypes = {
   orders: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,      // Assuming each order has an id
-      name: PropTypes.string.isRequired,     // Assuming each order has a name
+      id: PropTypes.number.isRequired, // Assuming each order has an id
+      name: PropTypes.string.isRequired, // Assuming each order has a name
     })
-  ).isRequired,  // orders prop is required and must be an array of objects
+  ).isRequired, // orders prop is required and must be an array of objects
 };
 
 export default AddReviewForm;

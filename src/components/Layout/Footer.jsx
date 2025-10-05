@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Footer.module.css";
-import instaImg from "../../images/socialIcons/instaGramLogoWhite.png"
-import facebookImg from "../../images/socialIcons/f_logo_RGB-White_58.png"
+import instaImg from "../../images/socialIcons/instaGramLogoWhite.png";
+import facebookImg from "../../images/socialIcons/f_logo_RGB-White_58.png";
 
 const Footer = () => {
   //Get Year for Footer

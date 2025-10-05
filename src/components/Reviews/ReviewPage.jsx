@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Button from "../UI/Button";
 import classes from "./ReviewPage.module.css";

@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import classes from "./Home.module.css";
 import SlideShow from "./SlideShow";
-import pouringImg from "../../images/manPouringSodaDrink.jpg"
-import ownersImg from "../../images/ownersPhoto.jpg"
+import pouringImg from "../../images/manPouringSodaDrink.jpg";
+import ownersImg from "../../images/ownersPhoto.jpg";
 
 const Home = () => {
   return (
@@ -25,18 +25,12 @@ const Home = () => {
                 poppin flavor in your mouth!
               </p>
             </div>
-            <img
-              src={pouringImg}
-              alt="Guy Pouring Drink"
-            ></img>
+            <img src={pouringImg} alt="Guy Pouring Drink"></img>
           </section>
         </div>
 
         <section className={classes.homeSectionTwo}>
-          <img
-            src={ownersImg}
-            alt="Creators of Poppin Soda Shop"
-          ></img>
+          <img src={ownersImg} alt="Creators of Poppin Soda Shop"></img>
           <div>
             <h1>Meet the Creators</h1>
             <p>

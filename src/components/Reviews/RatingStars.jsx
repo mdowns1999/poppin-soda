@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import Star from "../UI/Star";
 import classes from "./RatingStars.module.css";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const RatingStars = ({ rating = 1, setRating }) => {
   return (
