@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import SmartSlider from "react-smart-slider";
 import classes from "./SlideShow.module.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/sodaLogo.png"
+import logo from "../../images/sodaLogo.png";
 import flavors from "../../images/sodaDrinkFlavors.jpg";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 // Make a list of captions for the gallery. This will be the content that will be displayed.
 const captions = [

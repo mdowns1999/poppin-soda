@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import classes from "./Thankyou.module.css";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const ThankYouPage = ({ title, message }) => {
   return (

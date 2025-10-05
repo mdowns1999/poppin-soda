@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { useLoaderData } from "react-router-dom";
 import classes from "./CustomSoda.module.css";
 import CustomSodaForm from "./CustomSodaForm";
 import fetchHttp from "../../helper/fetchHttp";
-import cupImg from "../../images/emptyCup.jpg"
+import cupImg from "../../images/emptyCup.jpg";
 
 const CustomSodas = () => {
   //Variables

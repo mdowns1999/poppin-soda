@@ -52,7 +52,6 @@ const OrderConformation = () => {
 
 export default OrderConformation;
 
-
 export async function loader({ params }) {
   const id = params.id;
   let error = {

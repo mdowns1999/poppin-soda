@@ -79,12 +79,18 @@ const OrderSummary = () => {
       } else {
         // Handle server error responses
         const errorMessage = await result.text(); // Get error message from response body
-        setError(`Order submission failed: ${errorMessage || 'Something went wrong. Please try again later!'}`);
+        setError(
+          `Order submission failed: ${
+            errorMessage || "Something went wrong. Please try again later!"
+          }`
+        );
       }
     } catch (error) {
       // Handle network or other unexpected errors
-      console.log(error)
-      setError(`Network error. Something is wrong on our end.  Please Try back later!`);
+      console.log(error);
+      setError(
+        `Network error. Something is wrong on our end.  Please Try back later!`
+      );
     }
   };
 
@@ -98,17 +104,21 @@ const OrderSummary = () => {
         <div>
           <p>
             Please enter your name and number for the order. Please include any
-            additional things we need to be aware of. Also, please verify
-            your order one last time before sending it.
+            additional things we need to be aware of. Also, please verify your
+            order one last time before sending it.
           </p>
         </div>
         <div className={classes.orderInputBox}>
           <div className={classes.inputBox}>
-            <label htmlFor="orderName"><span>*</span>Name:</label>
+            <label htmlFor="orderName">
+              <span>*</span>Name:
+            </label>
             <input type="text" name="orderName" id="orderName" required />
           </div>
           <div className={classes.inputBox}>
-            <label htmlFor="orderPhone"><span>*</span>Phone: (ex 555-555-5555)</label>
+            <label htmlFor="orderPhone">
+              <span>*</span>Phone: (ex 555-555-5555)
+            </label>
             <input
               type="tel"
               name="orderPhone"
@@ -127,11 +137,12 @@ const OrderSummary = () => {
         <h2 className={classes.orderH2}>Total Balance: {totalAmount}</h2>
         <Button>Place Order</Button>
         {error && (
-  <div className={classes.error}>
-    <i className="material-icons">error_outline</i> {/* Optional icon */}
-    {error}
-  </div>
-)}
+          <div className={classes.error}>
+            <i className="material-icons">error_outline</i>{" "}
+            {/* Optional icon */}
+            {error}
+          </div>
+        )}
       </form>
     </div>
   );

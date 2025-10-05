@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import RadioButton from "../UI/RadioButton";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const SizeSelect = ({ setSize }) => {
   return (

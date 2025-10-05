@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import ReviewItem from "./ReviewItem";
 import classes from "./ReviewList.module.css";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const ReviewList = ({ reviews }) => {
   let reviewItems = reviews
@@ -15,7 +15,7 @@ const ReviewList = ({ reviews }) => {
       />
     ))
     .reverse();
-    
+
   return <ul className={classes.reviewList}>{reviewItems}</ul>;
 };
 
@@ -23,13 +23,13 @@ const ReviewList = ({ reviews }) => {
 ReviewList.propTypes = {
   reviews: PropTypes.arrayOf(
     PropTypes.shape({
-      _id: PropTypes.string.isRequired, // Assuming _id is a string and is required
-      name: PropTypes.string.isRequired, // name must be a string and is required
-      rating: PropTypes.number.isRequired, // rating must be a number and is required
-      message: PropTypes.string.isRequired, // message must be a string and is required
-      date: PropTypes.string.isRequired, // date must be a string and is required
+      _id: PropTypes.string.isRequired, 
+      name: PropTypes.string.isRequired, 
+      rating: PropTypes.number.isRequired, 
+      message: PropTypes.string.isRequired, 
+      date: PropTypes.string.isRequired, 
     })
-  ).isRequired, // reviews must be an array and is required
+  ).isRequired, 
 };
 
 export default ReviewList;

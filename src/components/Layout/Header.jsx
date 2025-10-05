@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 import { Link, useLocation } from "react-router-dom";
 import CartContext from "../../store/cart-context";
 import logo from "../../images/sodaLogo.png";
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const Header = ({ onShowCart }) => {
   //Variables
@@ -18,10 +18,7 @@ const Header = ({ onShowCart }) => {
     header = (
       <section className={classes.headerHome}>
         <Link to="/">
-          <img
-            src={logo}
-            alt="Poppin Soda Shop Logo"
-          ></img>
+          <img src={logo} alt="Poppin Soda Shop Logo"></img>
         </Link>
         <div className={classes.cartBox}>
           {cartCtx.items.length !== 0 && (
@@ -38,10 +35,7 @@ const Header = ({ onShowCart }) => {
       <>
         <section className={classes.header}>
           <Link to="/">
-            <img
-              src={logo}
-              alt="Poppin Soda Shop Logo"
-            ></img>
+            <img src={logo} alt="Poppin Soda Shop Logo"></img>
           </Link>
           <div>
             <HeaderCartButton onClick={onShowCart} />
