@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
-import SmartSlider from "react-smart-slider";
-import classes from "./SlideShow.module.css";
-import { Link } from "react-router-dom";
-import logo from "../../images/sodaLogo.png";
-import flavors from "../../images/sodaDrinkFlavors.jpg";
-import PropTypes from "prop-types"; // Import PropTypes
+import { useState, useEffect } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import classes from "./SlideShow.module.css"
+import { Link } from "react-router-dom"
+import logo from "../../images/sodaLogo.png"
+import flavors from "../../images/sodaDrinkFlavors.jpg"
+
 
 // Make a list of captions for the gallery. This will be the content that will be displayed.
 const captions = [
@@ -20,7 +22,9 @@ const captions = [
     link: "/products/custom",
     image: flavors,
   },
-];
+]
+
+const backgroundImage = "https://images.unsplash.com/photo-1528731708534-816fe59f90cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 // This caption is special because it does not have a link to the normal Caption function!
 const WelcomeCaption = ({ caption }) => (
@@ -36,17 +40,7 @@ const WelcomeCaption = ({ caption }) => (
       <p>{caption.description}</p>
     </div>
   </div>
-);
-
-// Define PropTypes for WelcomeCaption
-WelcomeCaption.propTypes = {
-  caption: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string,
-    image: PropTypes.string.isRequired,
-  }).isRequired,
-};
+)
 
 const Caption = ({ caption }) => (
   <div className={classes.caption}>
@@ -59,63 +53,82 @@ const Caption = ({ caption }) => (
       </Link>
     </div>
   </div>
-);
-
-// Define PropTypes for Caption
-Caption.propTypes = {
-  caption: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string,
-    image: PropTypes.string.isRequired,
-  }).isRequired,
-};
+)
 
 const SlideShow = () => {
   // Variables
-  const [isMobile, setIsMobile] = useState(false);
-  const [windowHeight, setHeight] = useState(650);
+  const [isMobile, setIsMobile] = useState(false)
+  const [windowHeight, setHeight] = useState(650)
 
-  // Choose the screen size and let the component know if the screen changes. This will help the slideshow size a little better.
+  // Choose the screen size and let the component know if the screen changes
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
+    setIsMobile(window.innerWidth < 768)
+  }
 
-  // Create an event listener
+  // Handle window resize
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    
     if (isMobile) {
-      setHeight(500);
+      setHeight(500)
     } else {
-      setHeight(650);
+      setHeight(650)
     }
 
-    // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isMobile]);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [isMobile])
 
-  const slidesArray = [
-    {
-      url: "https://images.unsplash.com/photo-1528731708534-816fe59f90cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      childrenElem: <WelcomeCaption caption={captions[0]} />,
-    },
-    {
-      url: "https://images.unsplash.com/photo-1528731708534-816fe59f90cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      childrenElem: <Caption caption={captions[1]} />,
-    },
-  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+  }
 
   return (
-    <SmartSlider
-      slides={slidesArray}
-      buttonShape="square" // round or square
-      height={windowHeight}
-      autoSlideInterval={7000}
-      autoSlide={true}
-    />
-  );
-};
+    <div 
+      className={classes.slideshow} 
+      style={{ 
+        height: `${windowHeight}px`,
+      }}
+    >
+      <Slider {...settings}>
+        <div>
+          <div 
+            className={classes.slideContainer}
+            style={{ 
+              height: `${windowHeight}px`,
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <WelcomeCaption caption={captions[0]} />
+          </div>
+        </div>
+        <div>
+          <div 
+            className={classes.slideContainer}
+            style={{ 
+              height: `${windowHeight}px`,
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <Caption caption={captions[1]} />
+          </div>
+        </div>
+      </Slider>
+    </div>
+  )
+}
 
-export default SlideShow;
+export default SlideShow

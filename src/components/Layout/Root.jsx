@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import { Outlet, useNavigation } from "react-router-dom";
-import Header from "./Header";
-import CartProvider from "../../store/CartProvider";
-import Footer from "./Footer";
-import Cart from "../Cart/Cart";
-import LoadingScreen from "../UserFeedback/LoadingScreen";
+import React, { useState } from "react"
+import { Outlet, useNavigation } from "react-router-dom"
+import Header from "./Header"
+import CartProvider from "../../store/CartProvider"
+import Footer from "./Footer"
+import Cart from "../Cart/Cart"
+import LoadingScreen from "../UserFeedback/LoadingScreen"
 
 function RootLayout() {
   //Variables
-  const navigation = useNavigation();
-  const [cartIsShown, setCartIsShown] = useState(false);
+  const navigation = useNavigation()
+  const [cartIsShown, setCartIsShown] = useState(false)
 
   const showCartHandler = () => {
-    setCartIsShown(true);
-  };
+    setCartIsShown(true)
+  }
 
   const hideCartHandler = () => {
-    setCartIsShown(false);
-  };
+    setCartIsShown(false)
+  }
 
   return (
     <>
@@ -32,7 +32,7 @@ function RootLayout() {
         <Footer />
       </CartProvider>
     </>
-  );
+  )
 }
 
-export default RootLayout;
+export default RootLayout

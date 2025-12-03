@@ -1,6 +1,5 @@
-import React from "react";
-import classes from "./Quantity.module.css";
-import PropTypes from "prop-types"; // Import PropTypes
+import classes from "./Quantity.module.css"
+import PropTypes from "prop-types" // Import PropTypes
 
 const QuantitySelect = ({ quantityRef }) => {
   return (
@@ -19,14 +18,14 @@ const QuantitySelect = ({ quantityRef }) => {
         required
       />
     </div>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 QuantitySelect.propTypes = {
   quantityRef: PropTypes.shape({
     current: PropTypes.instanceOf(Element), // quantityRef should be a ref object
   }).isRequired, // quantityRef is required
-};
+}
 
-export default QuantitySelect;
+export default QuantitySelect

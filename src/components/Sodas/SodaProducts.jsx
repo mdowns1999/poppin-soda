@@ -1,14 +1,13 @@
-import React from 'react';
-import SodaItem from "./SodaItem";
-import classes from "./SodaProducts.module.css";
-import Button from "../UI/Button";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import fetchHttp from "../../helper/fetchHttp";
+import SodaItem from "./SodaItem"
+import classes from "./SodaProducts.module.css"
+import Button from "../UI/Button"
+import { useLoaderData, useNavigate } from "react-router-dom"
+import fetchHttp from "../../helper/fetchHttp"
 import productOfMonthImg from "../../images/root.jpg"
 
 const SodaProducts = () => {
-  const navigate = useNavigate();
-  const SODAS = useLoaderData();
+  const navigate = useNavigate()
+  const SODAS = useLoaderData()
   const sodaList = (
     <>
       {SODAS.map((item) => (
@@ -27,11 +26,11 @@ const SodaProducts = () => {
         description={"Build your own delicious soda!"}
       />
     </>
-  );
+  )
 
   const navigateToDrinkHandler = () => {
-    navigate("pm1");
-  };
+    navigate("pm1")
+  }
 
   return (
     <>
@@ -53,19 +52,19 @@ const SodaProducts = () => {
       </section>
       <ul className={classes.products}>{sodaList} </ul>
     </>
-  );
-};
+  )
+}
 
-export default SodaProducts;
+export default SodaProducts
 
 export async function loader() {
   let error = {
     message:
       "Oh no! Looks like we have a mess on our end.  We are getting it cleaned up as fast as we can.  Please try again later!",
     status: 500,
-  };
+  }
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/sodas",
     error,
-  });
+  })
 }

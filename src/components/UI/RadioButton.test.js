@@ -1,6 +1,5 @@
-import React from 'react';
-import { render, screen } from "@testing-library/react";
-import RadioButton from "./RadioButton";
+import { render, screen } from "@testing-library/react"
+import RadioButton from "./RadioButton"
 
 // Global test variables we will use over and over.
 const testItem = {
@@ -10,7 +9,7 @@ const testItem = {
   price: '5.0',
   amount: 1,
   size: 8,
-};
+}
 
 describe("Card Component", () => {
   test("See Radio Button Renders properly", () => {
@@ -27,15 +26,15 @@ describe("Card Component", () => {
           setSodaID={() => {}} // Mock function
         />
       </div>
-    );
+    )
 
     // Exercise
     // ...None
 
     // Assert
-    const radio = screen.getByLabelText("Soda", { exact: false });
-    expect(radio).toBeInTheDocument();
-    expect(radio.value).toBe("5.0");
-  });
+    const radio = screen.getByLabelText("Soda", { exact: false })
+    expect(radio).toBeInTheDocument()
+    expect(radio.value).toBe("5.0")
+  })
 
-});
+})

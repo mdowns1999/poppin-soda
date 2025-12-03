@@ -1,5 +1,5 @@
 // jest-preset.js
-import { defaults } from 'jest-config';
+import { defaults } from 'jest-config'
 
 export default {
   ...defaults,
@@ -10,4 +10,4 @@ export default {
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
   setupFilesAfterEnv: ['<rootDir>/setupTests.js'], // Your setup file for testing
   testPathIgnorePatterns: ['/node_modules/', '/dist/'], // Ignore test files in these directories
-};
+}

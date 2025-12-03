@@ -1,30 +1,30 @@
-import React, { useContext, useEffect, useState } from "react";
-import CartContext from "../../store/cart-context";
-import Modal from "../UI/Modal";
-import classes from "./Cart.module.css";
-import { Link, useLocation } from "react-router-dom";
-import CartList from "./CartList";
-import PropTypes from 'prop-types'; // Import PropTypes
+import React, { useContext, useEffect, useState } from "react"
+import CartContext from "../../store/cart-context"
+import Modal from "../UI/Modal"
+import classes from "./Cart.module.css"
+import { Link, useLocation } from "react-router-dom"
+import CartList from "./CartList"
+import PropTypes from 'prop-types' // Import PropTypes
 
 const Cart = ({ onClose }) => {
   // Variables
-  let location = useLocation();
-  const [toOrder, setOrderRoute] = useState("");
-  const [cartHasOrders, setCarthasOrders] = useState(false);
-  const btnClasses = `${cartHasOrders ? classes.cartBtn : classes.disabledBtn}`;
-  const cartCtx = useContext(CartContext);
-  const totalAmount = `${cartCtx.totalAmount.toFixed(2)}`;
+  let location = useLocation()
+  const [toOrder, setOrderRoute] = useState("")
+  const [cartHasOrders, setCarthasOrders] = useState(false)
+  const btnClasses = `${cartHasOrders ? classes.cartBtn : classes.disabledBtn}`
+  const cartCtx = useContext(CartContext)
+  const totalAmount = `${cartCtx.totalAmount.toFixed(2)}`
 
   // This useEffect is for the check on if the cart has orders or not.
   useEffect(() => {
     if (cartCtx.items.length === 0) {
-      setOrderRoute(location);
-      setCarthasOrders(false);
+      setOrderRoute(location)
+      setCarthasOrders(false)
     } else {
-      setOrderRoute("order");
-      setCarthasOrders(true);
+      setOrderRoute("order")
+      setCarthasOrders(true)
     }
-  }, [cartCtx.items.length, location, cartCtx.items]);
+  }, [cartCtx.items.length, location, cartCtx.items])
 
   return (
     <Modal onClose={onClose}>
@@ -50,12 +50,12 @@ const Cart = ({ onClose }) => {
         </div>
       </div>
     </Modal>
-  );
-};
+  )
+}
 
 // Define PropTypes for Cart
 Cart.propTypes = {
   onClose: PropTypes.func,
-};
+}
 
-export default Cart;
+export default Cart

@@ -1,7 +1,6 @@
-import React from 'react';
-import { render, screen } from "@testing-library/react";
-import ReviewItem from "./ReviewItem";
-import { BrowserRouter } from "react-router-dom";
+import { render, screen } from "@testing-library/react"
+import ReviewItem from "./ReviewItem"
+import { BrowserRouter } from "react-router-dom"
 
 //Global test variables we will use over and over.
 const testReview = {
@@ -10,7 +9,7 @@ const testReview = {
   rating: 5.00,
   message: "A wonderful soda.",
   date: "1/1/23"
-};
+}
 
 describe("ReviewItem Component Tests", () => {
   test("Check the Review Item Renders to the screen", () => {
@@ -25,18 +24,18 @@ describe("ReviewItem Component Tests", () => {
         date={testReview.date}
       />
       </BrowserRouter>
-    );
+    )
 
     //Exercise
     //...NONE
 
     //Assert
-    let name = screen.getByText("John Doe", { exact: false });
-    expect(name).toBeInTheDocument();
-    let message = screen.getByText("A wonderful soda", { exact: false });
-    expect(message).toBeInTheDocument();
-    let date = screen.getByText("1/1/23", { exact: false });
-    expect(date).toBeInTheDocument();
+    let name = screen.getByText("John Doe", { exact: false })
+    expect(name).toBeInTheDocument()
+    let message = screen.getByText("A wonderful soda", { exact: false })
+    expect(message).toBeInTheDocument()
+    let date = screen.getByText("1/1/23", { exact: false })
+    expect(date).toBeInTheDocument()
     //Tear Down
-  });
-});
+  })
+})

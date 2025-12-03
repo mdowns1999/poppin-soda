@@ -1,6 +1,5 @@
-import React from "react";
-import RadioButton from "../UI/RadioButton";
-import PropTypes from "prop-types"; // Import PropTypes
+import RadioButton from "../UI/RadioButton"
+import PropTypes from "prop-types" // Import PropTypes
 
 const SizeSelect = ({ setSize }) => {
   return (
@@ -31,12 +30,12 @@ const SizeSelect = ({ setSize }) => {
         setSodaID={null}
       />
     </fieldset>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 SizeSelect.propTypes = {
   setSize: PropTypes.func.isRequired, // setSize is a required function
-};
+}
 
-export default SizeSelect;
+export default SizeSelect

@@ -1,7 +1,6 @@
-import React from "react";
-import ReviewItem from "./ReviewItem";
-import classes from "./ReviewList.module.css";
-import PropTypes from "prop-types"; // Import PropTypes
+import ReviewItem from "./ReviewItem"
+import classes from "./ReviewList.module.css"
+import PropTypes from "prop-types" // Import PropTypes
 
 const ReviewList = ({ reviews }) => {
   let reviewItems = reviews
@@ -14,10 +13,10 @@ const ReviewList = ({ reviews }) => {
         date={review.date}
       />
     ))
-    .reverse();
+    .reverse()
 
-  return <ul className={classes.reviewList}>{reviewItems}</ul>;
-};
+  return <ul className={classes.reviewList}>{reviewItems}</ul>
+}
 
 // Define the expected prop types
 ReviewList.propTypes = {
@@ -30,6 +29,6 @@ ReviewList.propTypes = {
       date: PropTypes.string.isRequired, 
     })
   ).isRequired, 
-};
+}
 
-export default ReviewList;
+export default ReviewList
