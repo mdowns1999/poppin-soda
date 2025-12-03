@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types" // Import PropTypes
 
 const CheckBox = ({ id, name, index, handleOnChange }) => {
   return (
@@ -13,8 +12,8 @@ const CheckBox = ({ id, name, index, handleOnChange }) => {
       />
       <label htmlFor={`custom-check-box-${id}`}>{name}</label>
     </>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 CheckBox.propTypes = {
@@ -22,6 +21,6 @@ CheckBox.propTypes = {
   name: PropTypes.string.isRequired,       // name is required and must be a string
   index: PropTypes.number.isRequired,      // index is required and must be a number
   handleOnChange: PropTypes.func.isRequired // handleOnChange is required and must be a function
-};
+}
 
-export default CheckBox;
+export default CheckBox

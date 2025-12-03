@@ -1,30 +1,30 @@
-import { useNavigate } from "react-router";
-import React, { useState } from "react";
-import Button from "../UI/Button";
-import classes from "./AddReviewForm.module.css";
-import RatingStars from "./RatingStars";
-import fetchHttp from "../../helper/fetchHttp";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router"
+import React, { useState } from "react"
+import Button from "../UI/Button"
+import classes from "./AddReviewForm.module.css"
+import RatingStars from "./RatingStars"
+import fetchHttp from "../../helper/fetchHttp"
+import PropTypes from "prop-types"
 
 const hasOrder = (orders, orderNum) => {
   //Filter the array to just the order numberwe need.
-  return orders.find((order) => order.order_num === orderNum);
-};
+  return orders.find((order) => order.order_num === orderNum)
+}
 
 const getName = (orders, orderNum) => {
-  return orders.filter((order) => order.order_num === orderNum);
-};
+  return orders.filter((order) => order.order_num === orderNum)
+}
 
 const getDate = () => {
-  let date = new Date();
-  return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
-};
+  let date = new Date()
+  return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear()
+}
 
 const postReview = (orderNum, message, name, rating, date) => {
   let error = {
     message: "Could not send soda order!",
     status: 500,
-  };
+  }
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/reviews",
     error,
@@ -40,19 +40,19 @@ const postReview = (orderNum, message, name, rating, date) => {
       message: message,
       date: date,
     },
-  });
-};
+  })
+}
 
 const AddReviewForm = ({ orders }) => {
-  const navigate = useNavigate();
-  const [rating, setRating] = useState(0);
+  const navigate = useNavigate()
+  const [rating, setRating] = useState(0)
   const submitReviewHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     if (hasOrder(orders, +event.target.orderNum.value)) {
       //Get the name of the order
-      let order = getName(orders, +event.target.orderNum.value);
+      let order = getName(orders, +event.target.orderNum.value)
       //get the current date
-      let date = getDate();
+      let date = getDate()
 
       //SEND POST REQUEST
       let promise = postReview(
@@ -61,22 +61,22 @@ const AddReviewForm = ({ orders }) => {
         order[0].name,
         rating,
         date
-      );
+      )
       promise.then((result) => {
         if (result.ok) {
           //Reset the form values then navigate away.
-          event.target.orderNum.value = "";
-          event.target.comments.value = "";
-          window.scrollTo(0, 0);
-          navigate("/reviews");
+          event.target.orderNum.value = ""
+          event.target.comments.value = ""
+          window.scrollTo(0, 0)
+          navigate("/reviews")
         }
-      });
+      })
     } else {
       alert(
         "That is not a valid Order Number! Please Check your number or make an order."
-      );
+      )
     }
-  };
+  }
 
   return (
     <form className={classes.reviewForm} onSubmit={submitReviewHandler}>
@@ -108,8 +108,8 @@ const AddReviewForm = ({ orders }) => {
 
       <Button>Submit</Button>
     </form>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 AddReviewForm.propTypes = {
@@ -119,6 +119,6 @@ AddReviewForm.propTypes = {
       name: PropTypes.string.isRequired, // Assuming each order has a name
     })
   ).isRequired, // orders prop is required and must be an array of objects
-};
+}
 
-export default AddReviewForm;
+export default AddReviewForm

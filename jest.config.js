@@ -26,5 +26,5 @@ export default  {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy', // For CSS modules
     '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/__mocks__/fileMock.js', // Mock images
   },
-};
+}
 

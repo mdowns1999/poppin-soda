@@ -1,7 +1,6 @@
-import React from "react";
-import Star from "../UI/Star";
-import classes from "./ReviewItem.module.css";
-import PropTypes from "prop-types"; // Import PropTypes
+import Star from "../UI/Star"
+import classes from "./ReviewItem.module.css"
+import PropTypes from "prop-types" // Import PropTypes
 
 const ReviewItem = ({ rating, name, date, message }) => {
   return (
@@ -17,8 +16,8 @@ const ReviewItem = ({ rating, name, date, message }) => {
         <p>{message}</p>
       </section>
     </li>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 ReviewItem.propTypes = {
@@ -26,6 +25,6 @@ ReviewItem.propTypes = {
   name: PropTypes.string.isRequired, // name must be a string and is required
   date: PropTypes.string.isRequired, // date must be a string and is required
   message: PropTypes.string.isRequired, // message must be a string and is required
-};
+}
 
-export default ReviewItem;
+export default ReviewItem

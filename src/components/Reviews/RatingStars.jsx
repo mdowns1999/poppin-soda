@@ -1,7 +1,6 @@
-import React from "react";
-import Star from "../UI/Star";
-import classes from "./RatingStars.module.css";
-import PropTypes from "prop-types"; // Import PropTypes
+import Star from "../UI/Star"
+import classes from "./RatingStars.module.css"
+import PropTypes from "prop-types" // Import PropTypes
 
 const RatingStars = ({ rating = 1, setRating }) => {
   return (
@@ -13,13 +12,13 @@ const RatingStars = ({ rating = 1, setRating }) => {
         </div>
       </fieldset>
     </div>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 RatingStars.propTypes = {
   rating: PropTypes.number,
   setRating: PropTypes.func.isRequired, // setRating prop is required and must be a function
-};
+}
 
-export default RatingStars;
+export default RatingStars

@@ -1,18 +1,17 @@
-import React from 'react';
-import PropTypes from "prop-types"; // Import PropTypes
-import classes from "./RadioButton.module.css";
+import PropTypes from "prop-types" // Import PropTypes
+import classes from "./RadioButton.module.css"
 
 const RadioButton = ({ setSelectedValue, setSodaID, name, value, id, label }) => {
   const handleRadioChange = (event) => {
     // Check if the prop being passed is a function, if it is then access the function to set the value
     if (setSelectedValue instanceof Function) {
-      setSelectedValue(+event.target.value);
+      setSelectedValue(+event.target.value)
     }
 
     if (setSodaID instanceof Function) {
-      setSodaID(event.target.id);
+      setSodaID(event.target.id)
     }
-  };
+  }
 
   return (
     <div className={classes.radio}>
@@ -26,8 +25,8 @@ const RadioButton = ({ setSelectedValue, setSodaID, name, value, id, label }) =>
       />
       <label htmlFor={id}>{label}</label>
     </div>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 RadioButton.propTypes = {
@@ -37,6 +36,6 @@ RadioButton.propTypes = {
   value: PropTypes.string.isRequired, // value is required and must be a string
   id: PropTypes.string.isRequired,    // id is required and must be a string
   label: PropTypes.string.isRequired   // label is required and must be a string
-};
+}
 
-export default RadioButton;
+export default RadioButton

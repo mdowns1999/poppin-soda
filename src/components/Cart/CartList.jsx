@@ -1,34 +1,33 @@
-import React from "react";
-import CartItem from "./CartItem";
-import PropTypes from 'prop-types'; // Import PropTypes
+import CartItem from "./CartItem"
+import PropTypes from 'prop-types' // Import PropTypes
 
 const CartList = ({ cartCtx }) => {
-  const { removeItem, addItem, deleteItem, items } = cartCtx;
+  const { removeItem, addItem, deleteItem, items } = cartCtx
 
   // Remove items from the cart by passing in the id
   const removeItemHandler = (id, event) => {
-    event.preventDefault();
-    removeItem(id);
-  };
+    event.preventDefault()
+    removeItem(id)
+  }
 
   // Add items from the cart by passing in the item and the amount of the item.
   // We will also make sure they do not have over 20 items in the cart
   const addItemHandler = (item, event) => {
-    event.preventDefault();
+    event.preventDefault()
     if (item.amount <= 19) {
-      addItem({ ...item, amount: 1 });
+      addItem({ ...item, amount: 1 })
     }
-  };
+  }
 
   // Delete items from the cart by passing in the id
   const deleteItemHandler = (id, event) => {
-    event.preventDefault();
-    deleteItem(id);
-  };
+    event.preventDefault()
+    deleteItem(id)
+  }
 
   // If the cart is empty, let the user know! If not display the cart Item.
   if (items.length === 0) {
-    return <h2>You have no items in the cart</h2>;
+    return <h2>You have no items in the cart</h2>
   } else {
     return (
       <ul>
@@ -45,9 +44,9 @@ const CartList = ({ cartCtx }) => {
           />
         ))}
       </ul>
-    );
+    )
   }
-};
+}
 
 // Define PropTypes for CartList
 CartList.propTypes = {
@@ -65,6 +64,6 @@ CartList.propTypes = {
       })
     ).isRequired,
   }).isRequired,
-};
+}
 
-export default CartList;
+export default CartList

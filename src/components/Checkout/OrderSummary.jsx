@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
-import CartContext from "../../store/cart-context";
-import classes from "./OrderSummary.module.css";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import CartList from "../Cart/CartList";
-import Button from "../UI/Button";
-import fetchHttp from "../../helper/fetchHttp";
+import React, { useContext, useEffect, useState } from "react"
+import CartContext from "../../store/cart-context"
+import classes from "./OrderSummary.module.css"
+import { useLoaderData, useNavigate } from "react-router-dom"
+import CartList from "../Cart/CartList"
+import Button from "../UI/Button"
+import fetchHttp from "../../helper/fetchHttp"
 
 const postOrder = async (event, orderNumber, cart) => {
   const error = {
     message: "Could not send soda order!",
     status: 500,
-  };
+  }
 
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/orders",
@@ -28,71 +28,71 @@ const postOrder = async (event, orderNumber, cart) => {
       notes: event.target.orderNotes.value.toString(),
       cart: cart,
     },
-  });
-};
+  })
+}
 
 const OrderSummary = () => {
-  const [error, setError] = useState(null);
-  const cartCtx = useContext(CartContext);
-  const ORDERS = useLoaderData();
-  const navigate = useNavigate();
+  const [error, setError] = useState(null)
+  const cartCtx = useContext(CartContext)
+  const ORDERS = useLoaderData()
+  const navigate = useNavigate()
 
   // Check if any orders are in the cart, navigate away if they don't
   useEffect(() => {
     if (cartCtx.items.length === 0) {
-      navigate("/products");
+      navigate("/products")
     }
-  }, [cartCtx.items.length, navigate]);
+  }, [cartCtx.items.length, navigate])
 
   // Generate a random order number
   const generateOrderNumber = () => {
-    let randNum;
-    let done = false;
+    let randNum
+    let done = false
 
     while (!done) {
-      randNum = Math.floor(Math.random() * 1000) + 1;
+      randNum = Math.floor(Math.random() * 1000) + 1
 
       // Check if the number is already in the database
       if (!ORDERS.some((order) => order.order_id === randNum)) {
-        done = true; // Valid order number found
+        done = true // Valid order number found
       }
     }
-    return randNum; // Return the valid order number
-  };
+    return randNum // Return the valid order number
+  }
 
   // Set the total Amount
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
 
   const submitOrderHandler = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     // Generate a new order number
-    const num = generateOrderNumber();
+    const num = generateOrderNumber()
 
     // Send POST request
     try {
-      const result = await postOrder(event, num, cartCtx.items);
+      const result = await postOrder(event, num, cartCtx.items)
 
       // Check if the response is ok
       if (result.ok) {
-        navigate("/confirm/" + num); // Navigate with the correct order number
+        navigate("/confirm/" + num) // Navigate with the correct order number
       } else {
         // Handle server error responses
-        const errorMessage = await result.text(); // Get error message from response body
+        const errorMessage = await result.text() // Get error message from response body
         setError(
           `Order submission failed: ${
             errorMessage || "Something went wrong. Please try again later!"
           }`
-        );
+        )
       }
     } catch (error) {
       // Handle network or other unexpected errors
-      console.log(error);
+      console.log(error)
       setError(
         `Network error. Something is wrong on our end.  Please Try back later!`
-      );
+      )
     }
-  };
+  }
 
   return (
     <div>
@@ -145,19 +145,19 @@ const OrderSummary = () => {
         )}
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default OrderSummary;
+export default OrderSummary
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   let error = {
     message: "Could not get orders!",
     status: 500,
-  };
+  }
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/orders",
     error,
-  });
+  })
 }

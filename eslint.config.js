@@ -1,9 +1,8 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import jest from 'eslint-plugin-jest'; // Import Jest plugin
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import jest from 'eslint-plugin-jest'
 
 export default [
   { ignores: ['dist'] },
@@ -13,7 +12,8 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
-        ...globals.jest, // Add Jest globals
+        ...globals.jest,
+        ...globals.node,
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -21,33 +21,20 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { react: { version: '18.3' } },
     plugins: {
-      react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      jest, // Add Jest plugin
+      jest,
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
-      'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
-      'react/react-in-jsx-scope': 'off', // Disable the rule that requires React to be in scope when using JSX
-      
-      // Extend `no-unused-vars` to ignore `React` import
-      'no-unused-vars': [
-        'warn', 
-        { 
-          vars: 'all', 
-          varsIgnorePattern: '^React$' // Ignore `React` as an unused variable
-        }
-      ],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'semi': ['error', 'never'],
     },
   },
-];
+]

@@ -1,6 +1,5 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import CartList from "./CartList";
+import { render, screen } from "@testing-library/react"
+import CartList from "./CartList"
 
 describe("CartList Component Tests", () => {
   test("Check Cart Renders to the screen", () => {
@@ -27,23 +26,23 @@ describe("CartList Component Tests", () => {
         removeItem: () => {},
         deleteItem: () => {},
         clearCart: () => {},
-      };
-    render(<CartList cartCtx={DUMMYCONTEXT} />);
+      }
+    render(<CartList cartCtx={DUMMYCONTEXT} />)
 
     //Exercise
     //...NONE
 
     //Assert
-    let itemOneName = screen.getByText("Test Soda", { exact: false });
-    expect(itemOneName).toBeInTheDocument();
-    let itemOnePrice = screen.getByText("5.00", { exact: false });
-    expect(itemOnePrice).toBeInTheDocument();
-    let itemTwoName = screen.getByText("Soda 2", { exact: false });
-    expect(itemTwoName).toBeInTheDocument();
-    let itemTwoPrice = screen.getByText("5.00", { exact: false });
-    expect(itemTwoPrice).toBeInTheDocument();
+    let itemOneName = screen.getByText("Test Soda", { exact: false })
+    expect(itemOneName).toBeInTheDocument()
+    let itemOnePrice = screen.getByText("5.00", { exact: false })
+    expect(itemOnePrice).toBeInTheDocument()
+    let itemTwoName = screen.getByText("Soda 2", { exact: false })
+    expect(itemTwoName).toBeInTheDocument()
+    let itemTwoPrice = screen.getByText("5.00", { exact: false })
+    expect(itemTwoPrice).toBeInTheDocument()
     //Tear Down
-  });
+  })
 
   test("Check if Cart tells user if no products aare present", () => {
     //Set up
@@ -54,15 +53,15 @@ describe("CartList Component Tests", () => {
         removeItem: () => {},
         deleteItem: () => {},
         clearCart: () => {},
-      };
-    render(<CartList cartCtx={DUMMYCONTEXT} />);
+      }
+    render(<CartList cartCtx={DUMMYCONTEXT} />)
 
     //Exercise
     //...NONE
 
     //Assert
-    let message = screen.getByText("You have no Items in the Cart", { exact: false });
-    expect(message).toBeInTheDocument();
+    let message = screen.getByText("You have no Items in the Cart", { exact: false })
+    expect(message).toBeInTheDocument()
     //Tear Down
-  });
-});
+  })
+})

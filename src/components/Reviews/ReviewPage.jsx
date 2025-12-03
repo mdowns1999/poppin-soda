@@ -1,18 +1,17 @@
-import React from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import Button from "../UI/Button";
-import classes from "./ReviewPage.module.css";
-import ReviewList from "./ReviewList";
-import fetchHttp from "../../helper/fetchHttp";
+import { useLoaderData, useNavigate } from "react-router-dom"
+import Button from "../UI/Button"
+import classes from "./ReviewPage.module.css"
+import ReviewList from "./ReviewList"
+import fetchHttp from "../../helper/fetchHttp"
 
 const ReviewPage = () => {
   //Variables
-  const navigate = useNavigate();
-  const REVIEWS = useLoaderData();
+  const navigate = useNavigate()
+  const REVIEWS = useLoaderData()
 
   const navigateToAddReviewHandler = () => {
-    navigate("add");
-  };
+    navigate("add")
+  }
 
   return (
     <>
@@ -33,19 +32,19 @@ const ReviewPage = () => {
         <ReviewList reviews={REVIEWS} />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ReviewPage;
+export default ReviewPage
 
 export async function loader() {
   let error = {
     message:
       "Oh no! Looks like we have a mess on our end.  We are getting it cleaned up as fast as we can.  Please try again later!",
     status: 500,
-  };
+  }
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/reviews",
     error,
-  });
+  })
 }

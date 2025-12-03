@@ -1,11 +1,10 @@
-import React from "react";
-import classes from "./Footer.module.css";
-import instaImg from "../../images/socialIcons/instaGramLogoWhite.png";
-import facebookImg from "../../images/socialIcons/f_logo_RGB-White_58.png";
+import classes from "./Footer.module.css"
+import instaImg from "../../images/socialIcons/instaGramLogoWhite.png"
+import facebookImg from "../../images/socialIcons/f_logo_RGB-White_58.png"
 
 const Footer = () => {
   //Get Year for Footer
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
 
   return (
     <footer className={classes.footer}>
@@ -31,7 +30,7 @@ const Footer = () => {
         </a>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

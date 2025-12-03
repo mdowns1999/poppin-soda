@@ -1,12 +1,12 @@
 function priceBySize(ItemPrice, ItemSize) {
   switch (ItemSize) {
     case 16:
-      return ItemPrice + 0.25;
+      return ItemPrice + 0.25
     case 32:
-      return ItemPrice + 0.5;
+      return ItemPrice + 0.5
     default:
-      return ItemPrice;
+      return ItemPrice
   }
 }
 
-export default priceBySize;
+export default priceBySize

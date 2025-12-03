@@ -1,5 +1,4 @@
-import React from 'react';
-import classes from "./LoadingScreen.module.css";
+import classes from "./LoadingScreen.module.css"
 
 const LoadingScreen = () => {
   return (
@@ -7,7 +6,7 @@ const LoadingScreen = () => {
       <div className={classes.sodaLoader}></div>
       <p>Filling a soda.  Hold on!</p>
     </section>
-  );
-};
+  )
+}
 
-export default LoadingScreen;
+export default LoadingScreen

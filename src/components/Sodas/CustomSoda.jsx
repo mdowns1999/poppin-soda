@@ -1,13 +1,12 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
-import classes from "./CustomSoda.module.css";
-import CustomSodaForm from "./CustomSodaForm";
-import fetchHttp from "../../helper/fetchHttp";
-import cupImg from "../../images/emptyCup.jpg";
+import { useLoaderData } from "react-router-dom"
+import classes from "./CustomSoda.module.css"
+import CustomSodaForm from "./CustomSodaForm"
+import fetchHttp from "../../helper/fetchHttp"
+import cupImg from "../../images/emptyCup.jpg"
 
 const CustomSodas = () => {
   //Variables
-  const customSodaLists = useLoaderData();
+  const customSodaLists = useLoaderData()
 
   return (
     <>
@@ -30,19 +29,19 @@ const CustomSodas = () => {
         />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default CustomSodas;
+export default CustomSodas
 
 export async function loader() {
   let error = {
     message:
       "Oh no! Looks like we have a mess on our end.  We are getting it cleaned up as fast as we can.  Please try again later!",
     status: 500,
-  };
+  }
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/custom",
     error,
-  });
+  })
 }

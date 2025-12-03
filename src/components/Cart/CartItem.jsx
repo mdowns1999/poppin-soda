@@ -1,10 +1,9 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import priceBySize from "../../helper/priceBySize";
-import classes from "./CartItem.module.css";
+import PropTypes from 'prop-types'
+import priceBySize from "../../helper/priceBySize"
+import classes from "./CartItem.module.css"
 
 const CartItem = ({price, size, name, amount, onRemove, onAdd, onDelete}) => {
-  const sizePrice = `$${priceBySize(price, size).toFixed(2)}`;
+  const sizePrice = `$${priceBySize(price, size).toFixed(2)}`
 
   return (
     <li className={classes.item}>
@@ -26,8 +25,8 @@ const CartItem = ({price, size, name, amount, onRemove, onAdd, onDelete}) => {
         </div>
       </div>
     </li>
-  );
-};
+  )
+}
 
 CartItem.propTypes = {
   price: PropTypes.number.isRequired,
@@ -37,6 +36,6 @@ CartItem.propTypes = {
   onRemove: PropTypes.func.isRequired,
   onAdd: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-};
+}
 
-export default CartItem;
+export default CartItem

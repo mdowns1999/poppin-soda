@@ -1,28 +1,28 @@
 import SodaProducts, {
   loader as sodaProductsLoader,
-} from "./components/Sodas/SodaProducts";
-import Home from "./components/Home/Home";
+} from "./components/Sodas/SodaProducts"
+import Home from "./components/Home/Home"
 import CustomSodas, {
   loader as customSodaLoader,
-} from "./components/Sodas/CustomSoda";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import RootLayout from "./components/Layout/Root";
+} from "./components/Sodas/CustomSoda"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import RootLayout from "./components/Layout/Root"
 import SodaDetail, {
   loader as sodaDetailLoader,
-} from "./components/Sodas/SodaDetail";
-import ErrorPage from "./components/UserFeedback/ErrorPage";
+} from "./components/Sodas/SodaDetail"
+import ErrorPage from "./components/UserFeedback/ErrorPage"
 import OrderSummary, {
   loader as orderSummaryLoader,
-} from "./components/Checkout/OrderSummary";
+} from "./components/Checkout/OrderSummary"
 import OrderConformation, {
   loader as orderConformationsLoader,
-} from "./components/Checkout/OrderComformation";
+} from "./components/Checkout/OrderComformation"
 import ReviewPage, {
   loader as reviewPageLoader,
-} from "./components/Reviews/ReviewPage";
+} from "./components/Reviews/ReviewPage"
 import AddReviewPage, {
   loader as addReviewLoader,
-} from "./components/Reviews/AddReviewPage";
+} from "./components/Reviews/AddReviewPage"
 
 const router = createBrowserRouter(
   [
@@ -71,11 +71,11 @@ const router = createBrowserRouter(
     },
   ],
   { basename: "/poppin-soda" }
-);
+)
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App
 // https://stackoverflow.com/questions/59076687/how-can-i-deploy-react-app-on-github-pages

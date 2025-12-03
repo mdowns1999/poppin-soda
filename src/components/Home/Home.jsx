@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import classes from "./Home.module.css";
-import SlideShow from "./SlideShow";
-import pouringImg from "../../images/manPouringSodaDrink.jpg";
-import ownersImg from "../../images/ownersPhoto.jpg";
+import React, { Fragment } from "react"
+import classes from "./Home.module.css"
+import SlideShow from "./SlideShow"
+import pouringImg from "../../images/manPouringSodaDrink.jpg"
+import ownersImg from "../../images/ownersPhoto.jpg"
 
 const Home = () => {
   return (
@@ -43,7 +43,7 @@ const Home = () => {
         </section>
       </div>
     </Fragment>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

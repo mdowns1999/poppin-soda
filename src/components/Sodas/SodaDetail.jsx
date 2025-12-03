@@ -1,24 +1,24 @@
-import React, { useRef, useState, useContext } from "react";
-import classes from "./SodaDetail.module.css";
-import CartContext from "../../store/cart-context";
-import Button from "../UI/Button";
-import SizeSelect from "./SizeSelect";
-import QuantitySelect from "./QuantitySelect";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import fetchHttp from "../../helper/fetchHttp";
-import priceBySize from "../../helper/priceBySize";
-import getSodaImage from "../../helper/getSodaImage";
+import React, { useRef, useState, useContext } from "react"
+import classes from "./SodaDetail.module.css"
+import CartContext from "../../store/cart-context"
+import Button from "../UI/Button"
+import SizeSelect from "./SizeSelect"
+import QuantitySelect from "./QuantitySelect"
+import { useLoaderData, useNavigate } from "react-router-dom"
+import fetchHttp from "../../helper/fetchHttp"
+import priceBySize from "../../helper/priceBySize"
+import getSodaImage from "../../helper/getSodaImage"
 
 const SodaDetail = () => {
-  let navigate = useNavigate();
-  const data = useLoaderData();
-  const sodaItem = data[0];
-  const cartCtx = useContext(CartContext);
-  const quantityRef = useRef();
-  const [size, setSize] = useState("");
+  let navigate = useNavigate()
+  const data = useLoaderData()
+  const sodaItem = data[0]
+  const cartCtx = useContext(CartContext)
+  const quantityRef = useRef()
+  const [size, setSize] = useState("")
 
   const addtoCartHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     cartCtx.addItem({
       id: sodaItem.id + size,
@@ -27,29 +27,29 @@ const SodaDetail = () => {
       price: sodaItem.price,
       ingredients: sodaItem.ingredients,
       size: size,
-    });
+    })
 
-    quantityRef.current.value = "";
+    quantityRef.current.value = ""
     for (let i = 0; i < event.target.length; i++) {
       if (event.target[i].checked) {
-        event.target[i].checked = null;
+        event.target[i].checked = null
       }
     }
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
 
     //Navigate away to Products page
-    navigate("/products");
-  };
+    navigate("/products")
+  }
 
-  let price = "Choose a size to see price.";
+  let price = "Choose a size to see price."
   if (size !== "") {
     price = `$${priceBySize(sodaItem.price, size).toFixed(
       2
-    )} per ${size}oz drink`;
+    )} per ${size}oz drink`
   }
 
-  const image = getSodaImage(sodaItem.name);
+  const image = getSodaImage(sodaItem.name)
 
   let ingredientsList = (
     <ul className={classes.ingredients}>
@@ -59,7 +59,7 @@ const SodaDetail = () => {
         </li>
       ))}
     </ul>
-  );
+  )
   return (
     <>
       {data[0].id === "pm1" && (
@@ -87,19 +87,19 @@ const SodaDetail = () => {
         </form>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default SodaDetail;
+export default SodaDetail
 
 export async function loader({ params }) {
-  const id = params.id;
+  const id = params.id
   let error = {
     message: "Could not get soda item!",
     status: 500,
-  };
+  }
   return fetchHttp({
     url: "https://poppinsodasbackend.onrender.com/sodas/" + id,
     error,
-  });
+  })
 }

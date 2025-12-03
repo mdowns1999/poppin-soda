@@ -1,9 +1,9 @@
-import tropical from "../images/tropical.jpg";
-import whiteGirl from "../images/whiteGirl.jpg";
-import mountain from "../images/mountain.jpg";
-import dirty from "../images/dirty.jpg";
-import root from "../images/root.jpg";
-import emptyCup from "../images/emptyCup.jpg";
+import tropical from "../images/tropical.jpg"
+import whiteGirl from "../images/whiteGirl.jpg"
+import mountain from "../images/mountain.jpg"
+import dirty from "../images/dirty.jpg"
+import root from "../images/root.jpg"
+import emptyCup from "../images/emptyCup.jpg"
 
 const imageMap = {
   "Tropical Sprite": tropical,
@@ -12,10 +12,10 @@ const imageMap = {
   "Dirty Diet Coke": dirty,
   "Carmel Root Beer": root,
   // Default case handled below
-};
+}
 
 const getSodaImage = (imageName) => {
-  return imageMap[imageName] || emptyCup; // Return emptyCup if imageName is not found
-};
+  return imageMap[imageName] || emptyCup // Return emptyCup if imageName is not found
+}
 
-export default getSodaImage;
+export default getSodaImage

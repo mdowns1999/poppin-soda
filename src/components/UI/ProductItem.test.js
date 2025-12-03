@@ -1,6 +1,5 @@
-import React from 'react';
-import { render, screen } from "@testing-library/react";
-import ProductItem from "./ProductItem";
+import { render, screen } from "@testing-library/react"
+import ProductItem from "./ProductItem"
 
 
 describe("Card Component", () => {
@@ -12,13 +11,13 @@ describe("Card Component", () => {
           <p>I am a Product Item Wrapper!</p>
         </ProductItem>
       </div>
-    );
+    )
 
     //Exercise
     //...None
 
     // //Assert
-    let item = screen.getByText("I am a Product Item Wrapper!", { exact: false });
-    expect(item).toBeInTheDocument();
-  });
-});
+    let item = screen.getByText("I am a Product Item Wrapper!", { exact: false })
+    expect(item).toBeInTheDocument()
+  })
+})

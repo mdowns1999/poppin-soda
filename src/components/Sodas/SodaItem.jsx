@@ -1,16 +1,15 @@
-import React from 'react';
-import ProductItem from "../UI/ProductItem";
-import { Link } from "react-router-dom";
-import getSodaImage from "../../helper/getSodaImage";
-import PropTypes from 'prop-types'; // Import PropTypes
+import ProductItem from "../UI/ProductItem"
+import { Link } from "react-router-dom"
+import getSodaImage from "../../helper/getSodaImage"
+import PropTypes from 'prop-types' // Import PropTypes
 
 const SodaItem = ({ name, id, description }) => {
-  let image = getSodaImage(name);
+  let image = getSodaImage(name)
 
   // Scroll to the top of the screen when we navigate away
   const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+    window.scrollTo(0, 0)
+  }
 
   return (
     <ProductItem>
@@ -22,14 +21,14 @@ const SodaItem = ({ name, id, description }) => {
         </div>
       </Link>
     </ProductItem>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 SodaItem.propTypes = {
   name: PropTypes.string.isRequired,        // name is a required string
   id: PropTypes.string.isRequired,          // id is a required string
   description: PropTypes.string.isRequired, // description is a required string
-};
+}
 
-export default SodaItem;
+export default SodaItem

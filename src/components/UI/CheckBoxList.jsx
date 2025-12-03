@@ -1,51 +1,51 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types"; // Import PropTypes
-import classes from "./CheckBoxList.module.css";
-import CheckBox from "./CheckBox";
+import React, { useState } from "react"
+import PropTypes from "prop-types" // Import PropTypes
+import classes from "./CheckBoxList.module.css"
+import CheckBox from "./CheckBox"
 
 const CheckBoxList = ({list, setTotalValue, setSelectedList}) => {
-  let selectedList = [];
+  let selectedList = []
   
   // Fill the check boxes to false since none will need to be checked right away
   const [checkedState, setCheckedState] = useState(
     new Array(list.length).fill(false)
-  );
+  )
 
   // This function will have the list of ingredients needed
   function updateChosenList(pos, updatedCheckedState) {
-    selectedList = []; // Reset selectedList on every update
+    selectedList = [] // Reset selectedList on every update
     updatedCheckedState.forEach((item, index) => {
       if (item) {
-        selectedList.push(list[index].name);
+        selectedList.push(list[index].name)
       }
-    });
+    })
   }
 
   const handleOnChange = (pos) => {
     // Update the array with our new checked box
     const updatedCheckedState = checkedState.map((item, index) =>
       index === pos ? !item : item
-    );
+    )
 
-    updateChosenList(pos, updatedCheckedState);
-    setCheckedState(updatedCheckedState);
+    updateChosenList(pos, updatedCheckedState)
+    setCheckedState(updatedCheckedState)
 
     // Calculate total price for toppings
     const totalPrice = updatedCheckedState.reduce(
       (total, currentState, index) => {
         if (currentState === true) {
           // return the total
-          return total + list[index].price;
+          return total + list[index].price
         }
-        return total;
+        return total
       },
       0
-    );
+    )
 
     // Update parent component's state
-    setTotalValue(totalPrice);
-    setSelectedList(selectedList);
-  };
+    setTotalValue(totalPrice)
+    setSelectedList(selectedList)
+  }
 
   return (
     <ul>
@@ -62,8 +62,8 @@ const CheckBoxList = ({list, setTotalValue, setSelectedList}) => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
 // Define the expected prop types
 CheckBoxList.propTypes = {
@@ -76,6 +76,6 @@ CheckBoxList.propTypes = {
   ).isRequired, // list is required and must be an array of objects
   setTotalValue: PropTypes.func.isRequired, // setTotalValue is a required function
   setSelectedList: PropTypes.func.isRequired // setSelectedList is a required function
-};
+}
 
-export default CheckBoxList;
+export default CheckBoxList
